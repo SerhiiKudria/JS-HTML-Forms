@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+  <form>
+    <h1>Contact form</h1>
+    <h2>Please fill in your information and we will be sending you order</h2>
+
+    <label>
+      <span>Your name</span>
+      <input type="text" name="first-name" placeholder="first name" autofocus required tabindex="1"
+        pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?" />
+      <input type="text" name="last-name" placeholder="last name" required tabindex="2"
+        pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?" />
+    </label>
+
+    <label>
+      <span>Your email</span>
+      <input type="email" name="email" placeholder="your@email" required tabindex="3" />
+    </label>
+
+    <label>
+      <span>Phone</span>
+      <input type="number" name="phone-number-first" autocomplete placeholder="000" tabindex="4" pattern="\d{3}"
+        required min="600" />
+      <input type="number" name="phone-number-second" autocomplete placeholder="000" tabindex="5" pattern="\d{3}"
+        required min="100" />
+      <input type="number" name="phone-numbe-third" autocomplete placeholder="0000" tabindex="6" pattern="\d{4}"
+        required />
+    </label>
+
+    <label>
+      <span>Message subject</span>
+      <select name="select" required>
+        <option value="value1">Value 1</option>
+        <option value="value2" selected>Other</option>
+        <option value="value3">Value 3</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Message</span>
+      <textarea id="message" name="message" rows="5" cols="33" required maxlength="10"></textarea>
+    </label>
+
+    <button type="submit" required>submit form</button>
+  </form>
+</body>
+
+</html>
